@@ -59,7 +59,7 @@ $.fn.youtubePlayer = function(options, methodObject) {
       modestbranding: 0,
       // Show related videos: boolean
       showRelated: 1,
-      // Iframe width: positive integer or string with percentage
+      // Iframe width: positive integer
       width: 640,
       // Iframe ratio: width/height ratio
       ratio: 16/9,
