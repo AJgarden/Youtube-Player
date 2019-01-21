@@ -155,7 +155,9 @@ $.fn.youtubePlayer = function(options, methodObject) {
 
     var settings = $.extend({}, defaults, options);
 
-    var settingsEvents = $.extend({}, defaultEvents, options.events);
+    var settingsEvents = defaultEvents;
+    if (options.events != null)
+      settingsEvents = $.extend({}, defaultEvents, options.events);
 
     var playerVars = {
       'autoplay': (settings.autoplay ? 1 : 0),
