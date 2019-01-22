@@ -10,21 +10,21 @@ See detail using demo at https://codepen.io/britz/pen/zeOozK
   <li>jquery.youtubePlayer.js</li>
 </ul>
 <p>Edit html code as</p>
-<blockquote>&lt;div id="player"&gt;&lt;/div&gt;</blockquote>
+<pre>&lt;div id="player"&gt;&lt;/div&gt;</pre>
 <p>You can pass youtube video id parameter by attribute</p>
-<blockquote>&lt;div id="player" data-video="Hze1SyktHa4"&gt;&lt;/div&gt;</blockquote>
+<pre>&lt;div id="player" data-video="Hze1SyktHa4"&gt;&lt;/div&gt;</pre>
 <p>Or you can pass youtube playlist id parameter</p>
-<blockquote>&lt;div id="player" data-listtype="playlist" data-list="PLE7ntAe3YYzZtGKd3Db4xo95P6G63MHqb"&gt;&lt;/div&gt;</blockquote>
+<pre>&lt;div id="player" data-listtype="playlist" data-list="PLE7ntAe3YYzZtGKd3Db4xo95P6G63MHqb"&gt;&lt;/div&gt;</pre>
 <p>Then call youtube-player function in script</p>
-<blockquote>
+<pre>
 &lt;script&gt;<br>
 $("#player").youtubePlayer();<br>
 &lt;/script&gt;
-</blockquote>
+</pre>
 
 <h2>Options:</h2>
 <p>By passing below parameters as object in function to set player(s) like as</p>
-<blockquote>
+<pre>
 &lt;script&gt;<br>
 $("#player").youtubePlayer({<br>
 &nbsp;&nbsp;&nbsp;&nbsp;autoplay: 1,<br>
@@ -32,7 +32,7 @@ $("#player").youtubePlayer({<br>
 &nbsp;&nbsp;&nbsp;&nbsp;width: 960<br>
 });<br>
 &lt;/script&gt;
-</blockquote>
+</pre>
 <table>
   <thead>
     <tr>
@@ -192,7 +192,7 @@ $("#player").youtubePlayer({<br>
 
 <h2>Events:</h2>
 <p>You can call function by listening below events like as</p>
-<blockquote>
+<pre>
 $("#player").youtubePlayer({<br>
 &nbsp;&nbsp;&nbsp;&nbsp;events: {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onReady: function(element) {<br>
@@ -200,7 +200,7 @@ $("#player").youtubePlayer({<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 });
-</blockquote>
+</pre>
 <table>
   <thead>
     <tr>
@@ -318,13 +318,13 @@ $("#player").youtubePlayer({<br>
 
 <h2>Methods:</h2>
 <p>By using methods to control player asynchronously.</p>
-<blockquote>
+<pre>
 <i>// initialize player first</i><br>
 $("#player").youtubePlayer();<br>
 <i>// use methods after initialization</i><br>
 $("#player").youtubePlayer("play");<br>
 $("#player").youtubePlayer("seek", 30);
-</blockquote>
+</pre>
 <table>
   <thead>
     <tr>
@@ -499,9 +499,9 @@ $("#player").youtubePlayer("seek", 30);
 
 <h2>Get instance:</h2>
 <p>After the element is setup, you can get instance by calling</p>
-<blockquote>
+<pre>
 $("#player").youtubePlayer("data");
-</blockquote>
+</pre>
 <p>The instance will give an array containing information as an object.</p>
 <table>
   <thead>
@@ -576,7 +576,7 @@ $("#player").youtubePlayer("data");
 
 <h2>Destroy:</h2>
 <p>If you want to destroy player, call the destroy method to direct selector.</p>
-<blockquote>
+<pre>
 $("#player").youtubePlayer("destroy");
-</blockquote>
+</pre>
 <p>It will return the destroyed element and return to a single div container.</p>
