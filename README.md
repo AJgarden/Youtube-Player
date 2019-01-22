@@ -27,9 +27,9 @@ $("#player").youtubePlayer();<br>
 <blockquote>
 &lt;script&gt;<br>
 $("#player").youtubePlayer({<br>
-&nbsp;&nbsp;autoplay: 1,<br>
-&nbsp;&nbsp;loop: 1,<br>
-&nbsp;&nbsp;width: 960
+&nbsp;&nbsp;&nbsp;&nbsp;autoplay: 1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;loop: 1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width: 960<br>
 });<br>
 &lt;/script&gt;
 </blockquote>
@@ -186,6 +186,132 @@ $("#player").youtubePlayer({<br>
       <td>string</td>
       <td>window.location.origin</td>
       <td>Set your website domain.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Events:</h2>
+<p>You can call function by listening below events like as</p>
+<blockquote>
+$("#player").youtubePlayer({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;events: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onReady: function(element) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("player is on ready.");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+});
+</blockquote>
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Return parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>onReady</th>
+      <td>element</td>
+      <td>Call after player iframe is ready.</td>
+    </tr>
+    <tr>
+      <th>onPlay</th>
+      <td>element</td>
+      <td>Call when video plays.</td>
+    </tr>
+    <tr>
+      <th>onPause</th>
+      <td>element</td>
+      <td>Call when video pauses.</td>
+    </tr>
+    <tr>
+      <th>onBuffering</th>
+      <td>element</td>
+      <td>Call when video is buffering.</td>
+    </tr>
+    <tr>
+      <th>onEnd</th>
+      <td>element</td>
+      <td>Call when every single video ends.</td>
+    </tr>
+    <tr>
+      <th>onCued</th>
+      <td>element, object</td>
+      <td>
+        Call when video/playlist is cued.<br>
+        Return object with <i><u>playlist</u></i>, <i><u>playlistId</u></i>, <i><u>playlistIndex</u></i>, and <i><u>videoId</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>onStateChange</th>
+      <td>element, number</td>
+      <td>
+        Call when state of video changes.<br>
+        Return number with:
+        <ul>
+          <li>-1 - unstarted</li>
+          <li>0 - ended</li>
+          <li>1 - playing</li>
+          <li>2 - paused</li>
+          <li>3 - buffering</li>
+          <li>5 - video/playlist cued</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>onQualityChange</th>
+      <td>element, string</td>
+      <td>
+        Call when quality of video changes.<br>
+        Return string with:
+        <ul>
+          <li>small - 240p</li>
+          <li>medium - 360p</li>
+          <li>large - 480p</li>
+          <li>hd720 - 720p</li>
+          <li>hd1080 - 1080p</li>
+          <li>highres - resolution more than 1080p</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>onRateChange</th>
+      <td>element, number</td>
+      <td>
+        Call when playback rate of video changes.<br>
+        Return float number of current rate.
+      </td>
+    </tr>
+    <tr>
+      <th>onError</th>
+      <td>element, number</td>
+      <td>
+        Call when an error occurs.<br>
+        Return number with
+        <ul>
+          <li>2 - video is not found or wrong id</li>
+          <li>5 - HTML player is wrong</li>
+          <li>100 - video is removed or private by owner</li>
+          <li>101 - video is not allowed be embed by owner</li>
+          <li>150 - same as code 101</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>onVideoNotFound</th>
+      <td>element</td>
+      <td>Call when video is not found.</td>
+    </tr>
+    <tr>
+      <th>onVideoPrivate</th>
+      <td>element</td>
+      <td>Call when video is removed or private.</td>
+    </tr>
+    <tr>
+      <th>onVideoNotEmbed</th>
+      <td>element</td>
+      <td>Call when video is not allowed be embed.</td>
     </tr>
   </tbody>
 </table>
