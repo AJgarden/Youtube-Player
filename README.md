@@ -573,3 +573,10 @@ $("#player").youtubePlayer("data");
     </tr>
   </tbody>
 </table>
+
+<h2>Destroy:</h2>
+<p>If you want to destroy player, call the destroy method to direct selector.</p>
+<blockquote>
+$("#player").youtubePlayer("destroy");
+</blockquote>
+<p>It will return the destroyed element and return to a single div container.</p>
