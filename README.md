@@ -496,3 +496,80 @@ $("#player").youtubePlayer("seek", 30);
     </tr>
   </tbody>
 </table>
+
+<h2>Get instance:</h2>
+<p>After the element is setup, you can get instance by calling</p>
+<blockquote>
+$("#player").youtubePlayer("data");
+</blockquote>
+<p>The instance will give an array containing information as an object.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>videoUrl</th>
+      <td>Youtube video url.</td>
+    </tr>
+    <tr>
+      <th>embedCode</th>
+      <td>HTML code of embed iframe.</td>
+    </tr>
+    <tr>
+      <th>iframeDOM</th>
+      <td>The element of iframe.</td>
+    </tr>
+    <tr>
+      <th>playlist</th>
+      <td>Youtube video ids of current playlist in an array.</td>
+    </tr>
+    <tr>
+      <th>playlistIndex</th>
+      <td>Current video index of playlist.</td>
+    </tr>
+    <tr>
+      <th>status</th>
+      <td>Current player state as code.</td>
+    </tr>
+    <tr>
+      <th>currentTime</th>
+      <td>Get the current playing time of video.</td>
+    </tr>
+    <tr>
+      <th>totalTime</th>
+      <td>Get the total time of video.</td>
+    </tr>
+    <tr>
+      <th>currentRate</th>
+      <td>Get the current playing rate of video.</td>
+    </tr>
+    <tr>
+      <th>availableRate</th>
+      <td>Get the available playback rate of video.</td>
+    </tr>
+    <tr>
+      <th>currentQuality</th>
+      <td>Get the current playing quality of video.</td>
+    </tr>
+    <tr>
+      <th>availableQuality</th>
+      <td>Get the available quality of video.</td>
+    </tr>
+    <tr>
+      <th>isMuted</th>
+      <td>Return if the video is muted.</td>
+    </tr>
+    <tr>
+      <th>volume</th>
+      <td>Get the current playing volume of player.</td>
+    </tr>
+    <tr>
+      <th>loadedPercentage</th>
+      <td>Get the current buffered percentage of whole video.</td>
+    </tr>
+  </tbody>
+</table>
