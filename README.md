@@ -15,3 +15,11 @@ See detail using demo at https://codepen.io/britz/pen/zeOozK
 <blockquote>&lt;div id="player" data-video="Hze1SyktHa4"&gt;&lt;/div&gt;</blockquote>
 <p>Or you can pass youtube playlist id parameter</p>
 <blockquote>&lt;div id="player" data-listtype="playlist" data-list="PLE7ntAe3YYzZtGKd3Db4xo95P6G63MHqb"&gt;&lt;/div&gt;</blockquote>
+<p>Then call youtube-player function in script</p>
+<blockquote>
+&lt;script&gt;
+  $("#player").youtubePlayer();
+&lt;/script&gt;
+</blockquote>
+
+<h2></h2>
