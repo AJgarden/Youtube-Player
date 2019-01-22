@@ -18,12 +18,21 @@ See detail using demo at https://codepen.io/britz/pen/zeOozK
 <p>Then call youtube-player function in script</p>
 <blockquote>
 &lt;script&gt;<br>
-&nbsp;&nbsp;$("#player").youtubePlayer();<br>
+$("#player").youtubePlayer();<br>
 &lt;/script&gt;
 </blockquote>
 
 <h2>Options:</h2>
-<p>By passing below parameters as object in function to set player(s).</p>
+<p>By passing below parameters as object in function to set player(s) like as</p>
+<blockquote>
+&lt;script&gt;<br>
+$("#player").youtubePlayer({<br>
+&nbsp;&nbsp;autoplay: 1,<br>
+&nbsp;&nbsp;loop: 1,<br>
+&nbsp;&nbsp;width: 960
+});<br>
+&lt;/script&gt;
+</blockquote>
 <table>
   <thead>
     <tr>
