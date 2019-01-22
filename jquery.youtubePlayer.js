@@ -99,7 +99,7 @@ $.fn.youtubePlayer = function(options, methodObject) {
         return false;
       },
       // callback when player cues new video / playlist
-      onCued: function(element) {
+      onCued: function(element, data) {
         return false;
       },
       // callback when player's state changed
@@ -253,8 +253,14 @@ $.fn.youtubePlayer = function(options, methodObject) {
               settingsEvents.onPause.call(this, $(event.target.a));
             if (stateChangeCode == 3)
               settingsEvents.onBuffering.call(this, $(event.target.a));
-            if (stateChangeCode == 5)
-              settingsEvents.onCued.call(this, $(event.target.a));
+            if (stateChangeCode == 5) {
+              settingsEvents.onCued.call(this, $(event.target.a), {
+                videoId: event.target.j.videoData.video_id,
+                playlistId: event.target.j.playlistId,
+                playlistIndex: event.target.j.playlistIndex,
+                playlist: event.target.j.playlist,
+              });
+            }
           },
           'onPlaybackQualityChange': function(event) {
             settingsEvents.onQualityChange.call(this, $(event.target.a), event.data);
