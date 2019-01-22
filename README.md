@@ -315,3 +315,184 @@ $("#player").youtubePlayer({<br>
     </tr>
   </tbody>
 </table>
+
+<h2>Methods:</h2>
+<p>By using methods to control player asynchronously.</p>
+<blockquote>
+<i>// initialize player first</i><br>
+$("#player").youtubePlayer();<br>
+<i>// use methods after initialization</i><br>
+$("#player").youtubePlayer("play");<br>
+$("#player").youtubePlayer("seek", 30);
+</blockquote>
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>play</th>
+      <td>-</td>
+      <td>Play video.</td>
+    </tr>
+    <tr>
+      <th>pause</th>
+      <td>-</td>
+      <td>Pause video.</td>
+    </tr>
+    <tr>
+      <th>stop</th>
+      <td>-</td>
+      <td>Stop video to the end.</td>
+    </tr>
+    <tr>
+      <th>seek</th>
+      <td>number</td>
+      <td>Seek video to direct second(s).</td>
+    </tr>
+    <tr>
+      <th>previous</th>
+      <td>-</td>
+      <td>
+        Play previous video of playlist.<br>
+        Only available when playlist is setup.
+      </td>
+    </tr>
+    <tr>
+      <th>next</th>
+      <td>-</td>
+      <td>
+        Play next video of playlist.<br>
+        Only available when playlist is setup.
+      </td>
+    </tr>
+    <tr>
+      <th>playAt</th>
+      <td>number</td>
+      <td>
+        Play direct index video of playlist.<br>
+        Only available when playlist is setup.<br>
+        The index is integer greater than 0 and started by 0.
+      </td>
+    </tr>
+    <tr>
+      <th>loop</th>
+      <td>boolean</td>
+      <td>Set the loop to be on/off.</td>
+    </tr>
+    <tr>
+      <th>shuffle</th>
+      <td>-</td>
+      <td>
+        Shuffle the playlist order.<br>
+        Only available when playlist is setup.
+      </td>
+    </tr>
+    <tr>
+      <th>mute</th>
+      <td>-</td>
+      <td>Mute the video.</td>
+    </tr>
+    <tr>
+      <th>unmute</th>
+      <td>-</td>
+      <td>Unmute the video.</td>
+    </tr>
+    <tr>
+      <th>volume</th>
+      <td>number</td>
+      <td>
+        Set the volume of video.<br>
+        The number is integer in 0~100.
+      </td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td>number</td>
+      <td>
+        Set the iframe to direct width.<br>
+        The number is positive integer.
+      </td>
+    </tr>
+    <tr>
+      <th>height</th>
+      <td>number</td>
+      <td>
+        Set the iframe to direct height.<br>
+        The number is positive integer.
+      </td>
+    </tr>
+    <tr>
+      <th>size</th>
+      <td>object</td>
+      <td>
+        Set the iframe to direct size.<br>
+        The object contains <i><u>width</u></i> and <i><u>height</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>rate</th>
+      <td>number</td>
+      <td>
+        Set the video to direct playback rate.<br>
+        The number must be available to video.
+      </td>
+    </tr>
+    <tr>
+      <th>cueVideo</th>
+      <td>string or object</td>
+      <td>
+        Cue but not play a new video.<br>
+        String with youtube video id with start at 0, or<br>
+        object with <i><u>videoId</u></i>, <i><u>start</u></i> and <i><u>end</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>loadVideo</th>
+      <td>string or object</td>
+      <td>
+        Cue and play a new video.<br>
+        String with youtube video id with start at 0, or<br>
+        object with <i><u>videoId</u></i>, <i><u>start</u></i> and <i><u>end</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>cueUrl</th>
+      <td>string or object</td>
+      <td>
+        Cue but not play a new video.<br>
+        String with youtube video url as format <i><u>https://www.youtube.com/v/81McU12FmuU</u></i> with start at 0, or<br>
+        object with <i><u>videoUrl</u></i>, <i><u>start</u></i> and <i><u>end</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>loadUrl</th>
+      <td>string or object</td>
+      <td>
+        Cue and play a new video.<br>
+        String with youtube video url as format <i><u>https://www.youtube.com/v/81McU12FmuU</u></i> with start at 0, or<br>
+        object with <i><u>videoUrl</u></i>, <i><u>start</u></i> and <i><u>end</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>cueList</th>
+      <td>object</td>
+      <td>
+        Cue but not play a new playlist.<br>
+        Object with <i><u>listType</u></i>, <i><u>list</u></i>, <i><u>index</u></i>, <i><u>start</u></i>.
+      </td>
+    </tr>
+    <tr>
+      <th>loadList</th>
+      <td>object</td>
+      <td>
+        Cue and play a new playlist.<br>
+        Object with <i><u>listType</u></i>, <i><u>list</u></i>, <i><u>index</u></i>, <i><u>start</u></i>.
+      </td>
+    </tr>
+  </tbody>
+</table>
